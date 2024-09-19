@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <link type="text/css" rel="stylesheet" href="home.css">
+    <script src="check-account.js" defer></script> <!--JS file used for the controll of the email and password format-->
+</head>
+<body>
+<h1 style="align-content: center">Create your account</h1> <!--Form for the creation of the account-->
+<div class="login">
+    <form ACTION="CreateAccount" method="post" id="form">
+    <label>Name: </label>
+    <input type ="text" name="name" required autofocus><br>
+    <label>Last Name: </label>
+    <input type ="text" name="lastName" required autofocus><br>
+    <label for="email">Email: </label>
+    <input type ="text" name = "email" id="email" required ><br>
+        <span id="emailError" class="error"></span>
+    <label>Password  </label>
+    <input type = password name="password" id="password" required><br>
+        <span id="passwordError" class="error"></span>
+    <input type="submit" value="Crea Account">
+</form>
+</div>
+
+</body>
+</html>

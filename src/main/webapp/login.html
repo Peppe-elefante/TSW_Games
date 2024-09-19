@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link type="text/css" rel="stylesheet" href="home.css">
+</head>
+<body>
+    <h1 style="align-content: center">Login to your account</h1> <!--Form for the login-->
+    <div class="login">
+    <form ACTION="Login" method="post">
+        <label>Email: </label>
+        <input type = email name = "email" pattern="/^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/gm" required autofocus><br>
+        <label>Password  </label>
+        <input type = password name="password" required><br>
+        <input type="submit" value="Login">
+    </form><br>
+    <p>Don't have an account? </p> <!--If the User doesn't have already an accont, they can create one from this link-->
+    <a href="create-account.html">Create account</a>
+    </div>
+</body>
+</html>
