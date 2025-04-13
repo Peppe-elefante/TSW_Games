@@ -25,7 +25,7 @@ public class PurchaseDOA {
                 totalCost += cost;
                 quantity += cartGame.getQuantity();
             }
-            CartDOA emptyCart = new CartDOA();
+            CartDAO emptyCart = new CartDAO();
             emptyCart.EmptyCart(userID);
 
             PreparedStatement tp = con.prepareStatement("insert into purchase(id, total_cost, quantity, customer_id) values (?,?,?,?)");

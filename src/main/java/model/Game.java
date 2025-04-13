@@ -12,6 +12,14 @@ public class Game {
         return id;
     }
 
+    public Game() {
+    }
+
+    public Game(String name, String category, int price) {
+        this.name = name;
+        this.category = category;
+        this.price = price;
+    }
 
     public String getName() {
         return name;

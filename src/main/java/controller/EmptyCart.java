@@ -13,7 +13,7 @@ import java.io.IOException;
 public class EmptyCart extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        CartDOA emptycart = new CartDOA();
+        CartDAO emptycart = new CartDAO();
         HttpSession ssn = request.getSession(true);
         Customer user = (Customer) ssn.getAttribute("User");
         emptycart.EmptyCart(user.getId());

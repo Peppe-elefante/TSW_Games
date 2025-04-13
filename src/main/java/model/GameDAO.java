@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class GameDOA {
+public class GameDAO {
 
     //Take game data form the database with the game ID
     public Game getByID(int ID){

@@ -19,7 +19,7 @@ public class GetCart extends HttpServlet {
         else{
             Customer user = (Customer) ssn.getAttribute("User");
             List<Game> cart = new ArrayList<>();
-            CartDOA getCart = new CartDOA();
+            CartDAO getCart = new CartDAO();
             cart = getCart.getCart(user.getId());
             ssn.setAttribute("Cart", cart);
             ssn.setAttribute("Price", TotalPrice(cart));

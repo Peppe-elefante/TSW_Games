@@ -2,7 +2,7 @@ package model;
 import java.sql.*;
 import java.util.*;
 
-public class CartDOA {
+public class CartDAO {
     // Take the game data and then, add them into the database
     public boolean AddToCart(int gameID, int userID){
         try (Connection con = ConPool.getConnection()) {

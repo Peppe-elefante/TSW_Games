@@ -18,10 +18,17 @@ public class AddToCart extends HttpServlet{
         else{
 
             Customer user = (Customer) ssn.getAttribute("User");
-            CartDOA cart = new CartDOA();
+            CartDAO cart = new CartDAO();
             int userID = user.getId();
             int gameID = Integer.parseInt(request.getParameter("gameID"));
-            cart.AddToCart(gameID, userID);
+            try{
+                cart.AddToCart(gameID, userID);
+            } catch (Exception e) {
+                e.printStackTrace();
+                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error adding game to cart");
+                return;
+            }
+
 
             RequestDispatcher dispatcher = request.getRequestDispatcher("home-page.jsp");
             dispatcher.forward(request, response);

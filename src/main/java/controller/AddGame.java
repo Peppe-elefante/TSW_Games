@@ -15,13 +15,16 @@ public class AddGame extends HttpServlet{
         String name= request.getParameter("name");
         String category = request.getParameter("category");
         int price = Integer.parseInt(request.getParameter("price"));
-        addImage(filePart, name.replace(" ", ""), response);
-        GameDOA createGame = new GameDOA();
-        Game g = new Game();
-        g.setName(name);
-        g.setPrice(price);
-        g.setCategory(category);
+        GameDAO createGame = new GameDAO();
+        Game g = new Game(name, category, price);
+        try{
         createGame.saveGame(g);
+        addImage(filePart, name.replace(" ", ""), response);
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error saving game");
+            return;
+        }
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/search-category-form.html");
         dispatcher.forward(request, response);

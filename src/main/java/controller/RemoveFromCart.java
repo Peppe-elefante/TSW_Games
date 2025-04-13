@@ -15,7 +15,7 @@ public class RemoveFromCart extends HttpServlet{
         Customer user = (Customer) ssn.getAttribute("User");
         List<Game> cart = (List<Game>) ssn.getAttribute("Cart");
         int gameID = Integer.parseInt(request.getParameter("gameID"));
-        CartDOA updateCart = new CartDOA();
+        CartDAO updateCart = new CartDAO();
 
         if(updateCart.RemoveFromCart(user.getId(), gameID, cart)){
             cart = updateCart.getCart(user.getId());
