@@ -8,6 +8,9 @@ public class Customer {
     private int id;
     private boolean permission;
 
+    public Customer() {
+    }
+
     public Customer(String name, String lastName, String email, String password) {
         this.name = name;
         this.lastName = lastName;
