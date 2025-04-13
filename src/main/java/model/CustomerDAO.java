@@ -1,7 +1,7 @@
 package model;
 import java.sql.*;
 
-public class CustomerDOA {
+public class CustomerDAO {
     //Login for the user: controll if the User already exists
     public Customer loginUser(String email, String password){
         try (Connection con = ConPool.getConnection()) {

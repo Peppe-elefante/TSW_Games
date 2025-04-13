@@ -12,13 +12,13 @@ public class CreateAccount extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
+        String name = request.getParameter("name");
+        String lastName = request.getParameter("lastName");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        Customer c = new Customer(name, lastName, email, password);
+        CustomerDAO create = new CustomerDAO();
 
-        Customer c = new Customer();
-        CustomerDOA create = new CustomerDOA();
-        c.setName(request.getParameter("name"));
-        c.setLastName(request.getParameter("lastName"));
-        c.setEmail(request.getParameter("email"));
-        c.setPassword(request.getParameter("password"));
 
         if(create.CreateAccount(c)){
             HttpSession ssn = request.getSession(true);

@@ -35,7 +35,7 @@ public class CartDAO {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Game p = new Game();
-                GameDOA getGame = new GameDOA();
+                GameDAO getGame = new GameDAO();
                 int id = rs.getInt(1);
                 int quantity = rs.getInt(2);
                 p = getGame.getByID(id);

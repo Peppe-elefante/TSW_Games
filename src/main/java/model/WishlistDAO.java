@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class WishlistDOA {
+public class WishlistDAO {
     //Add a new game in the wishlist table of a certain User
     public void addToWishlist(int gameID, int CustomerID ) {
         try (Connection con = ConPool.getConnection()) {
@@ -36,7 +36,7 @@ public class WishlistDOA {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Game p = new Game();
-                GameDOA getGame = new GameDOA();
+                GameDAO getGame = new GameDAO();
                 int id = rs.getInt(1);
                 p = getGame.getByID(id);
                 gameRes.add(p);

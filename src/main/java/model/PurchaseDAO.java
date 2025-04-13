@@ -2,7 +2,7 @@ package model;
 import java.sql.*;
 import java.util.*;
 
-public class PurchaseDOA {
+public class PurchaseDAO {
     //Function for purchase games that are in the cart
     public void PurchaseFromCart(List<Game> cart, int userID) throws SQLException {
 
@@ -51,7 +51,7 @@ public class PurchaseDOA {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Game p = new Game();
-                GameDOA getGame = new GameDOA();
+                GameDAO getGame = new GameDAO();
                 int id = rs.getInt(1);
                 p = getGame.getByID(id);
                 gameRes.add(p);
