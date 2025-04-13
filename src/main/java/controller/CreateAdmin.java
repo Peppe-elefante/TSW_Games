@@ -12,7 +12,7 @@ import java.util.*;
 public class CreateAdmin extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        GameDOA getGames = new GameDOA();
+        GameDAO getGames = new GameDAO();
         ServletContext cont = getServletContext();
         String contextPath = cont.getRealPath("/Games.txt");
         System.out.println(contextPath);

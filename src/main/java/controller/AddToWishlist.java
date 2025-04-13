@@ -18,7 +18,7 @@ public class AddToWishlist extends HttpServlet{
         }
         else{
             Customer user = (Customer) ssn.getAttribute("User");
-            WishlistDOA getWishlist = new WishlistDOA();
+            WishlistDAO getWishlist = new WishlistDAO();
             List<Game> wishlist = new ArrayList<>();
             int userID = user.getId();
             int gameID = Integer.parseInt(request.getParameter("gameID"));

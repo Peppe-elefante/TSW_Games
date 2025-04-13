@@ -11,7 +11,7 @@ import java.util.*;
 public class GetTrending extends HttpServlet  {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        GameDOA gameSearch = new GameDOA();
+        GameDAO gameSearch = new GameDAO();
         HttpSession ssn = request.getSession(true);
         List<Game> games = gameSearch.getTrending();
 

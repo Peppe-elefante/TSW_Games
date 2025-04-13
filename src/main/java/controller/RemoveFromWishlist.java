@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.WishlistDOA;
+import model.WishlistDAO;
 import model.Customer;
 import model.*;
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class RemoveFromWishlist extends HttpServlet {
         HttpSession ssn = request.getSession(true);
         Customer user = (Customer) ssn.getAttribute("User");
         int gameID = Integer.parseInt(request.getParameter("gameID"));
-        WishlistDOA updateWishlist = new WishlistDOA();
+        WishlistDAO updateWishlist = new WishlistDAO();
         List<Game> wishlist = new ArrayList<Game>();
 
         updateWishlist.RemoveFromWishlist(user.getId(), gameID);

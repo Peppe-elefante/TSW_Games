@@ -22,7 +22,7 @@ public class Purchase extends HttpServlet{
         List<Game> cart = (List<Game>) ssn.getAttribute("Cart");
         List<Game> boughtGames = new ArrayList<>();
 
-        PurchaseDOA purchase = new PurchaseDOA();
+        PurchaseDAO purchase = new PurchaseDAO();
         try {
             purchase.PurchaseFromCart(cart, user.getId());
         } catch (SQLException e) {

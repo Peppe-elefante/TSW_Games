@@ -17,7 +17,7 @@ public class Login extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         Customer c;
-        CustomerDOA checkLogin = new CustomerDOA();
+        CustomerDAO checkLogin = new CustomerDAO();
         c = checkLogin.loginUser(email, password);
 
         if(c == null){
@@ -28,12 +28,12 @@ public class Login extends HttpServlet {
             ssn.setAttribute("User", c);
             ssn.setAttribute("Permission", c.isPermission());
 
-            WishlistDOA getWishlist = new WishlistDOA();
+            WishlistDAO getWishlist = new WishlistDAO();
             List<Game> wishlist = new ArrayList<>();
             wishlist = getWishlist.getWishlist(c.getId());
             ssn.setAttribute("Wishlist", wishlist);
 
-            PurchaseDOA getBGames = new PurchaseDOA();
+            PurchaseDAO getBGames = new PurchaseDAO();
             List<Game> boughtGames = new ArrayList<>();
             boughtGames = getBGames.ViewBoughtGames(c.getId());
             ssn.setAttribute("BoughtGames", boughtGames);

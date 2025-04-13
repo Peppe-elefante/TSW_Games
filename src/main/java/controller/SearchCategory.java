@@ -12,7 +12,7 @@ public class SearchCategory extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String s = request.getParameter("category");
-        GameDOA gameSearch = new GameDOA();
+        GameDAO gameSearch = new GameDAO();
         List<Game> games = gameSearch.retrieveByCategory(s);
 
         request.setAttribute("search", s);
