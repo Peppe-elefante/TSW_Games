@@ -5,6 +5,8 @@
 <head>
     <title>Profile Page</title>
     <link type="text/css" rel="stylesheet" href="home.css">
+    <link type="text/css" rel="stylesheet" href="navbar.css">
+
 </head>
 <body>
     <ul class="top-navbar">

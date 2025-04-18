@@ -3,6 +3,8 @@
 <head>
     <title>Admin Page</title> <!--Page accessible only for the administrator-->
     <link type="text/css" rel="stylesheet" href="home.css">
+    <link type="text/css" rel="stylesheet" href="navbar.css">
+
     <script src="search-bar.js" defer></script>
 </head>
 <body>

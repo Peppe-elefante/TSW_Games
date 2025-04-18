@@ -2,7 +2,10 @@ html{
     background-color: #E6E6E6;
     font-family: "Comic Sans MS", serif;
 }
-
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
 h1{
     background-color: #FF9900;
@@ -13,64 +16,7 @@ h1{
     padding-bottom: 5px;
 }
 
-ul.top-navbar{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color:#FF9900;
-    overflow: hidden;
-    margin-top: 0;
-    border-bottom: 0 solid #F70;
-    box-shadow: 0 2px 8px;
 
-
-}
-
-.top-navbar li{
-    display: inline;
-    display: flex;
-    align-items: center;
-    float: left;
-
-}
-
-.top-navbar a{
-    color: #F0F0F0;
-    display: block;
-    padding: 14px 16px;
-    background-color: #FF9900;
-
-
-}
-
-.top-navbar p{
-    color: #F0F0F0;
-    display: block;
-    background-color: #FF9900;
-    margin-top: 10px;
-}
-
-.top-navbar h1{
-    display: block;
-    padding: 0px 0px;
-    margin-top: 0;
-    margin-right: 250px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
-}
-
-.top-navbar li:hover a:hover{
-    background-color: #FFB647;
-}
-
-.top-navbar img{
-    width:40px;
-    height:40px;
-    padding: 4px 5px;
-    display: block;
-    border-radius: 50%;
-    background-color: #FF9900;
-    display: inline;
-}
 
 a{
     color: #F0F0F0;

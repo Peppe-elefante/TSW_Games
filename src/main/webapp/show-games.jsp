@@ -6,6 +6,8 @@
 <head>
     <title>Title</title>
   <link type="text/css" rel="stylesheet" href="home.css">
+  <link type="text/css" rel="stylesheet" href="navbar.css">
+
 </head>
 <body>
 <div class="game-result">

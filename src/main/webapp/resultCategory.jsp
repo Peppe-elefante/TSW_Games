@@ -6,6 +6,8 @@
 <head>
     <title>${search} games</title> <!--Based on the research this page will showed up all the relative games-->
     <link type="text/css" rel="stylesheet" href="home.css">
+    <link type="text/css" rel="stylesheet" href="navbar.css">
+
 </head>
 <body>
 
